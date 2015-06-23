@@ -1,0 +1,73 @@
+//Import Bourbon
+@import "bourbon/bourbon"
+
+
+//	### SASS Variables ### 
+
+// Global
+// Fonts 
+// Colors 
+// Sizes 
+
+body
+	// @include background-image(linear-gradient(#6acac3 0, #6acac3 50%, #6acac3  100%))
+
+
+h1,h2,h3
+	color: white
+	line-height: 1.45
+	text-shadow: 0px 0px 20px #000
+.container
+	// height: 1vh
+
+
+.disappear
+	opacity: 0 
+.copy
+	// background-color: rgba(0, 0, 0, 0.8)
+
+.intro-wrapper
+	top: 0	
+section
+	&:nth-of-type(even)
+		background-color: #ccc
+	&:nth-of-type(odd)
+		background-color: #222
+	background-size: 100%
+	@include padding (20px)
+	min-height: 120vh
+
+
+#intro
+	// @include background-image(url("..img/back.png"), linear-gradient(white 0, yellow 50%, transparent 50%))
+	@include background-image(url("../img/back.png"))
+	background-size: 100%
+	background-repeat: no-repeat
+
+	.copy
+		// background-color: rgba(0, 0, 0, 0.8)
+		// height: 80vh
+#dawn
+	@include background-image(linear-gradient(#020a27 0, #193f61 50%, pink  100%))
+
+.dawnClass
+	// @include background-image(linear-gradient(#020a27 0, #193f61 50%, pink  100%))
+
+
+#tribes
+	// @include background-image(url("..img/back.png"), linear-gradient(white 0, yellow 50%, transparent 50%))
+	background-color: #594830
+
+.tribesClass
+	// @include background-image(url("..img/back.png"), linear-gradient(white 0, yellow 50%, transparent 50%))
+	// @include background-image(linear-gradient(#594830 0, #594830 50%, #594830  100%))
+
+
+#egypt
+#moses
+#today
+#newscaster
+#ceos
+#you
+#end
+#cta 
