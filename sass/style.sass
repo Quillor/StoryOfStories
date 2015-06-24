@@ -8,7 +8,22 @@
 // Fonts 
 // Colors
 $blue-base: #438c8c 
+$yellow-base: #dd851d
 // Sizes 
+
+.zone1
+	position: relative
+	z-index: 1
+.zone2
+	position: relative
+	z-index: 2
+.zone3
+	position: relative
+	z-index: 3
+.zone4
+	position: relative
+	z-index: 4
+
 
 body
 	@include background-image(linear-gradient(#000010 0, #000010 50%, #000010  100%))
@@ -43,27 +58,48 @@ section
 
 
 #intro
-	// @include background-image(url("..img/back.png"), linear-gradient(white 0, yellow 50%, transparent 50%))
 	@include background-image(url("../img/back.png"))
 	background-size: 100%
 	background-repeat: no-repeat
 
-	.copy
-		// background-color: rgba(0, 0, 0, 0.8)
-		// height: 80vh
 #dawn
-	// @include background-image(url("../img/bg/dawnBack.png"), linear-gradient( darken($blue-base, 10%) 0, $blue-base 77%, lighten($blue-base, 10%) 100%)
 	@include background-image(url("../img/bg/dawnBack.png"), linear-gradient( darken($blue-base, 30%) 0, darken($blue-base, 25%) 100%))		
 	* #dawn-campfire
 		max-width: 400px
-		// margin-top: 20vh
 
 #tribes
-	// @include background-image(url("..img/back.png"), linear-gradient(white 0, yellow 50%, transparent 50%))
 	background-color: darken($blue-base, 30%)
-
+	* .tribesPeople
+		@include margin (75px null null null)
 
 #egypt
+	background-color: darken($blue-base, 80%)
+	* #pharoah
+		@include margin (300px null null null)
+		z-index: 5
+
+	* .glyph-items
+		@extend .zone1
+		fill: #dd851d
+		@include animation-name(glow)
+		@include animation-duration(2s)
+		@include animation-direction(alternate)
+		@include animation-timing-function(ease)
+		@include animation-iteration-count(infinite)
+		@include keyframes(glow) 
+			from 
+				fill: $yellow-base
+			to 
+				fill: lighten($yellow-base, 10%)
+	#glyphSVG
+		@include margin (null null -400px null)
+
+
+
+
+
+
+		 		
 #moses
 #today
 #newscaster

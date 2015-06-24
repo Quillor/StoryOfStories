@@ -1,3 +1,19 @@
+.zone1, #egypt * .glyph-items {
+  position: relative;
+  z-index: 1; }
+
+.zone2 {
+  position: relative;
+  z-index: 2; }
+
+.zone3 {
+  position: relative;
+  z-index: 3; }
+
+.zone4 {
+  position: relative;
+  z-index: 4; }
+
 body {
   background-image: -webkit-linear-gradient(#000010 0, #000010 50%, #000010 100%);
   background-image: linear-gradient(to   , #000010 50%, #000010 100%); }
@@ -39,5 +55,47 @@ section {
 
 #tribes {
   background-color: #112525; }
+  #tribes * .tribesPeople {
+    margin-top: 75px; }
+
+#egypt {
+  background-color: black; }
+  #egypt * #pharoah {
+    margin-top: 300px;
+    z-index: 5; }
+  #egypt * .glyph-items {
+    fill: #dd851d;
+    -webkit-animation-name: glow;
+    -moz-animation-name: glow;
+    animation-name: glow;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-direction: alternate;
+    -moz-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-timing-function: ease;
+    -moz-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
+@-webkit-keyframes glow {
+  from {
+    fill: #dd851d; }
+  to {
+    fill: #e79d46; } }
+@-moz-keyframes glow {
+  from {
+    fill: #dd851d; }
+  to {
+    fill: #e79d46; } }
+@keyframes glow {
+  from {
+    fill: #dd851d; }
+  to {
+    fill: #e79d46; } }
+  #egypt #glyphSVG {
+    margin-bottom: -400px; }
 
 /*# sourceMappingURL=style.css.map */
