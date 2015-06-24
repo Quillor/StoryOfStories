@@ -19,26 +19,15 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- ### Scroll Magic -->
-  <script type="text/javascript" src="js/scrollMagicjs/lib/jquery.min.js"></script>
-  <script type="text/javascript" src="js/scrollMagicjs/lib/highlight.pack.js"></script>
-  <script type="text/javascript" src="js/scrollMagicjs/lib/modernizr.custom.min.js"></script>
-  <script type="text/javascript" src="js/scrollMagicjs/examples.js"></script>
 
-  <script type="text/javascript" src="js/scrollMagicjs/lib/greensock/TweenMax.min.js"></script>
-  <script type="text/javascript" src="js/scrollMagicjs/minified/ScrollMagic.min.js"></script>
-  <script type="text/javascript" src="js/scrollMagicjs/minified/plugins/animation.gsap.min.js"></script>
-  <!-- Add indicators for development. Comment out in production. -->
-  <script type="text/javascript" src="js/scrollMagicjs/minified/plugins/debug.addIndicators.min.js"></script>
-    <script src="js/flowType.js"></script>
-
-
+  <!-- TypeFlow -->
+  <script src="js/flowType.js"></script>
   </head>
   <body>
 
-    <div id="introtrigger"></div>
 
-    <section id="intro" class="container-fluid">
+
+    <section id="intro" class="container-fluid ">
         <div class="content">
           <div class="container">
             <h1 class="text-center">The Story of Stories</h1>
@@ -47,19 +36,20 @@
           </div>
         </div>
       </section>
-    <div id="dawntrigger"></div>
-    <section id="dawn" class="container-fluid">
+
+    <section id="dawn" class="container-fluid disappear fade-in" >
         <div class="content">
           <div class="container">
-            <h2 class="text-center">Since the dawn of time</h2>
-            <h3 class="text-center">we’ve told stories.</h3>        
-            <img id="quill" src="img/object.png" class="pull-right disappear">
-            <div style="height:50vh;bottom:0px;background-color:darkblue"></div>
-
+            <div class="copy">
+              <h2 class="text-center">Since the dawn of time</h2>
+              <h3 class="text-center">we’ve told stories.</h3>  
+             </div>
+      
+            <img id="dawn-campfire" alt="campfire" src="img/dawn-campfire.png" class="center-block disappear fade-in-fire">
           </div>
         </div>
     </section>
-    <div id="tribestrigger"></div>
+
     <section id="tribes" class="container-fluid">
         <div class="content">
           <div class="container">
@@ -67,13 +57,13 @@
             <h3 class="text-center">into cultures &amp; tribes </h3>        
             <div class="row">
                <div class="col-xs-4">
-                  <img id="quill" src="img/object.png" class="center-block disappear">
+                  <img id="quill" src="img/object.png" class="center-block disappear fade-in-tribes1">
                </div>
                <div class="col-xs-4">
-                  <img id="quill" src="img/object.png" class="center-block disappear">
+                  <img id="quill" src="img/object.png" class="center-block disappear fade-in-tribes2">
                </div>
                <div class="col-xs-4">
-                  <img id="quill" src="img/object.png" class="center-block disappear">
+                  <img id="quill" src="img/object.png" class="center-block disappear fade-in-tribes3">
                </div>                            
             </div>            
           </div>
@@ -85,7 +75,7 @@
           <div class="container">
             <h2 class="text-center">In stories of old</h2>
             <h3 class="text-center">those with the most power, controlled the stories of society.</h3>        
-            <img id="quill" src="img/object.png" class="center-block">
+            <img id="pharoah" src="img/egypt-pharoah.png" class="pull-right fade-in-egypt">
           </div>
         </div>      
     </section>
@@ -171,12 +161,89 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Boostrap.js -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  
-  <!-- ScrollMagic.js Controller  -->
-  <script src="js/scrollMagic.js"></script>
-
   <!-- FlowType.js Makes responsive text sizes -->
   <script src="js/flowType.js"></script>
+
+  <script type="text/javascript" src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+  <script type="text/javascript" src="js/scrollarama/iscroll.js"></script>
+  <script type="text/javascript" src="js/scrollarama/polyfill.requestAnimationFrame.js"></script>
+  <script type="text/javascript" src="js/scrollarama/greensock/TweenMax.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="_/js/jquery-1.9.1.min.js"><\/script>')</script>
+  <script src="js/scrollarama/jquery.superscrollorama.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      
+      /* INIT SUPERSCROLLORAMA LIKE USUAL */
+      
+      var controller = $.superscrollorama();
+      var tweenFade = TweenMax.to( $('.fade-in'), .5, {css:{opacity: 1}});
+
+      // #### Dawn
+      var tweenFadeFire = TweenMax.to( $('.fade-in-fire'), .5, {css:{opacity: 1}});
+      controller.addTween('.fade-in-fire', tweenFadeFire, 450);
+
+
+      // #### Tribes
+      var tweenFadeTribes1 = TweenMax.to( $('.fade-in-tribes1'), .5, {css:{
+          opacity: 1,
+          marginTop: 0}});
+      controller.addTween('.fade-in-tribes1', tweenFadeTribes1, 0);
+
+      var tweenFadeTribes2 = TweenMax.to( $('.fade-in-tribes2'), .5, {css:{
+          opacity: 1,
+          marginTop: 0}});
+      controller.addTween('.fade-in-tribes2', tweenFadeTribes2, 400);
+
+      var tweenFadeTribes3 = TweenMax.to( $('.fade-in-tribes3'), .5, {css:{
+          opacity: 1,
+          marginTop: 0}});
+      controller.addTween('.fade-in-tribes3', tweenFadeTribes3, 800); 
+
+      //Egypt 
+
+      var tweenFadeEgypt = TweenMax.to( $('.fade-in-egypt'), .5, {css:{
+          opacity: 1,
+          marginTop: 0,
+          marginBottom: -50,
+        }});
+      controller.addTween('.fade-in-egypt', tweenFadeEgypt, 800); 
+
+
+
+
+      var tweenColor = TweenMax.to( $('.pin-it'), .5, {css:{color: "#FF0000"}});
+      controller.addTween('.fade-in', tweenFade, 450);
+      controller.pin('.pin-it', 500, {offset: -100, anim: tweenColor});
+      
+
+
+
+      /* MOBILE IMPLEMENTATION OF SUPERSCROLLORAMA */
+      if (Modernizr.touch) {
+        var scrollPos = 0;
+        // using iScroll but deacting -webkit-transform because pin wouldn't work becasue of a webkit bug: https://code.google.com/p/chromium/issues/detail?id=20574
+        var myScroll = new iScroll('viewport-wrapper', {vScrollbar: true, hScroll: false, vScroll: true, bounce: false, useTransform: false, useTransition: false});
+        function animationLoop () {
+          // make sure to have the requestAnimationFrame polyfill by Paul Irish: https://gist.github.com/paulirish/1579671
+          window.requestAnimationFrame(animationLoop);
+          if (myScroll.y != scrollPos) { // if position has changed
+            scrollPos = myScroll.y;
+            // udate scrollcontainer position
+            controller.setScrollContainerOffset(0, -myScroll.y);
+            // force an immediate update
+            controller.triggerCheckAnim(true);
+          }
+        }
+        // when deactivating transform in iScroll (useTransform:false) requestAnimationFrame is not triggered during touchmove
+        $("#viewport-wrapper").get(0).addEventListener("touchmove", function() {
+          animationLoop ();
+        });
+        animationLoop ();
+      }
+    });
+  </script>
 
 
   </body>

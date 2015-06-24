@@ -6,17 +6,19 @@
 
 // Global
 // Fonts 
-// Colors 
+// Colors
+$blue-base: #438c8c 
 // Sizes 
 
 body
-	// @include background-image(linear-gradient(#6acac3 0, #6acac3 50%, #6acac3  100%))
+	@include background-image(linear-gradient(#000010 0, #000010 50%, #000010  100%))
 
 
 h1,h2,h3
 	color: white
 	line-height: 1.45
 	text-shadow: 0px 0px 20px #000
+	@include margin (10vh null null null)
 .container
 	// height: 1vh
 
@@ -35,7 +37,9 @@ section
 		background-color: #222
 	background-size: 100%
 	@include padding (20px)
-	min-height: 120vh
+	min-height: 100vh
+	background-size: cover
+	background-position: bottom
 
 
 #intro
@@ -48,19 +52,15 @@ section
 		// background-color: rgba(0, 0, 0, 0.8)
 		// height: 80vh
 #dawn
-	@include background-image(linear-gradient(#020a27 0, #193f61 50%, pink  100%))
-
-.dawnClass
-	// @include background-image(linear-gradient(#020a27 0, #193f61 50%, pink  100%))
-
+	// @include background-image(url("../img/bg/dawnBack.png"), linear-gradient( darken($blue-base, 10%) 0, $blue-base 77%, lighten($blue-base, 10%) 100%)
+	@include background-image(url("../img/bg/dawnBack.png"), linear-gradient( darken($blue-base, 30%) 0, darken($blue-base, 25%) 100%))		
+	* #dawn-campfire
+		max-width: 400px
+		// margin-top: 20vh
 
 #tribes
 	// @include background-image(url("..img/back.png"), linear-gradient(white 0, yellow 50%, transparent 50%))
-	background-color: #594830
-
-.tribesClass
-	// @include background-image(url("..img/back.png"), linear-gradient(white 0, yellow 50%, transparent 50%))
-	// @include background-image(linear-gradient(#594830 0, #594830 50%, #594830  100%))
+	background-color: darken($blue-base, 30%)
 
 
 #egypt

@@ -59,7 +59,7 @@ console.log("flowtype.js is installed");
          maximum   : 1200,
          minFont   : 35,
          maxFont   : 70,
-         fontRatio : 20
+         fontRatio : 8
       });
 
 
@@ -69,7 +69,7 @@ console.log("flowtype.js is installed");
          maximum   : 700,
          minFont   : 30,
          maxFont   : 50,
-         fontRatio : 40
+         fontRatio : 4
       });
 
 
@@ -78,11 +78,11 @@ console.log("flowtype.js is installed");
          maximum   : 400,
          minFont   : 20,
          maxFont   : 30,
-         fontRatio : 40
+         fontRatio : 4
       });
 
 
-console.log("flowtype.js is closed");
+console.log("flowtype.js is ended");
 
 
 
