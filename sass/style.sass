@@ -16,6 +16,7 @@ h1,h2,h3
 $blue-base: #438c8c 
 $yellow-base: #dd851d
 $orange-base: #dd4e1d
+
 // Sizes 
 
 //z-index zones
@@ -43,10 +44,13 @@ section
 	background-position: bottom
 
 #intro
-	@include background-image(url("../img/back.png"))
+	@include background-image(url("../img/bg/introBack.png"))
+	background-color: darken($blue-base, 0%)
 	background-size: 100%
 	background-repeat: no-repeat
-
+	* #quill
+		width: 100%
+		max-width: 200px
 #dawn
 	@include padding(0px)
 	@include background-image(url("../img/bg/dawnBack.png"), linear-gradient( darken($blue-base, 30%) 0, darken($blue-base, 25%) 100%))		
@@ -87,32 +91,37 @@ section
 #moses
 	@include padding(0px)
 	@include background-image(url("../img/bg/dawnBack.png"), linear-gradient( darken($blue-base, 30%) 0, darken($blue-base, 25%) 100%))	
-
 	* #mosesMoses
-		@include margin (null null -100px -100px)
+		@include margin (null null -200px -100px)
 		width: 100%
 		max-width: 1000px
+	#moses-ground	
+		width: 100%		
+		@include margin (-100px null null null )	
 #today
+	@include background-image(url("../img/bg/todayBack.png"))	
 	background-color: $orange-base
 	@include padding (100px 0px)
 #newscaster
 	* #newscastMan
-		@include margin (400px null -80px null)
+		@include margin (10px null -180px null)
 		z-index: 5
 #ceos
 	background-color: darken($blue-base, 30%)
 	* .row
-		@include margin (null null -200px null)	
+		@include margin (null null 0px null)	
 	* .ceos 
 		width: 100% 
-		@include margin (null null -80px null)
+		@include margin (null null -20px null)
 	* .logos
 		width: 100%
 		max-width: 80px
 		opacity: .5
 #you
 	@include background-image(url("../img/bg/o3Back.jpg")) 
-
-
 #end
+	@include background-image(url("../img/bg/woodBack.jpg")) 
+	background-repeat: repeat
+	background-size: 600px
+
 #cta 

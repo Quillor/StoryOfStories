@@ -35,10 +35,14 @@ section {
   background-position: bottom; }
 
 #intro {
-  background-image: url("../img/back.png");
-  background-image: url("../img/back.png");
+  background-image: url("../img/bg/introBack.png");
+  background-image: url("../img/bg/introBack.png");
+  background-color: #438c8c;
   background-size: 100%;
   background-repeat: no-repeat; }
+  #intro * #quill {
+    width: 100%;
+    max-width: 200px; }
 
 #dawn {
   padding: 0;
@@ -101,27 +105,32 @@ section {
   background-image: url("../img/bg/dawnBack.png"), -webkit-linear-gradient(#112525 0, #1a3636 100%);
   background-image: url("../img/bg/dawnBack.png"), linear-gradient(to   , #1a3636 100%); }
   #moses * #mosesMoses {
-    margin-bottom: -100px;
+    margin-bottom: -200px;
     margin-left: -100px;
     width: 100%;
     max-width: 1000px; }
+  #moses #moses-ground {
+    width: 100%;
+    margin-top: -100px; }
 
 #today {
+  background-image: url("../img/bg/todayBack.png");
+  background-image: url("../img/bg/todayBack.png");
   background-color: #dd4e1d;
   padding: 100px 0; }
 
 #newscaster * #newscastMan {
-  margin-top: 400px;
-  margin-bottom: -80px;
+  margin-top: 10px;
+  margin-bottom: -180px;
   z-index: 5; }
 
 #ceos {
   background-color: #112525; }
   #ceos * .row {
-    margin-bottom: -200px; }
+    margin-bottom: 0; }
   #ceos * .ceos {
     width: 100%;
-    margin-bottom: -80px; }
+    margin-bottom: -20px; }
   #ceos * .logos {
     width: 100%;
     max-width: 80px;
@@ -130,5 +139,11 @@ section {
 #you {
   background-image: url("../img/bg/o3Back.jpg");
   background-image: url("../img/bg/o3Back.jpg"); }
+
+#end {
+  background-image: url("../img/bg/woodBack.jpg");
+  background-image: url("../img/bg/woodBack.jpg");
+  background-repeat: repeat;
+  background-size: 600px; }
 
 /*# sourceMappingURL=style.css.map */
