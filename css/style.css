@@ -1,3 +1,13 @@
+body {
+  background-image: -webkit-linear-gradient(#000010 0, #000010 50%, #000010 100%);
+  background-image: linear-gradient(to   , #000010 50%, #000010 100%); }
+
+h1, h2, h3 {
+  color: white;
+  line-height: 1.45;
+  text-shadow: 0px 0px 20px #000;
+  margin-top: 10vh; }
+
 .zone1, #egypt * .glyph-items {
   position: relative;
   z-index: 1; }
@@ -10,25 +20,12 @@
   position: relative;
   z-index: 3; }
 
-.zone4 {
+.zone4, #dawn * #dawn-campfire {
   position: relative;
   z-index: 4; }
 
-body {
-  background-image: -webkit-linear-gradient(#000010 0, #000010 50%, #000010 100%);
-  background-image: linear-gradient(to   , #000010 50%, #000010 100%); }
-
-h1, h2, h3 {
-  color: white;
-  line-height: 1.45;
-  text-shadow: 0px 0px 20px #000;
-  margin-top: 10vh; }
-
 .disappear {
   opacity: 0; }
-
-.intro-wrapper {
-  top: 0; }
 
 section {
   background-size: 100%;
@@ -36,10 +33,6 @@ section {
   min-height: 100vh;
   background-size: cover;
   background-position: bottom; }
-  section:nth-of-type(even) {
-    background-color: #ccc; }
-  section:nth-of-type(odd) {
-    background-color: #222; }
 
 #intro {
   background-image: url("../img/back.png");
@@ -48,10 +41,15 @@ section {
   background-repeat: no-repeat; }
 
 #dawn {
+  padding: 0;
   background-image: url("../img/bg/dawnBack.png"), -webkit-linear-gradient(#112525 0, #1a3636 100%);
   background-image: url("../img/bg/dawnBack.png"), linear-gradient(to   , #1a3636 100%); }
   #dawn * #dawn-campfire {
-    max-width: 400px; }
+    max-width: 400px;
+    margin-bottom: -200px; }
+  #dawn #dawn-ground {
+    width: 100%;
+    margin-top: -100px; }
 
 #tribes {
   background-color: #112525; }
@@ -61,16 +59,19 @@ section {
 #egypt {
   background-color: black; }
   #egypt * #pharoah {
-    margin-top: 300px;
+    margin-top: 400px;
+    margin-bottom: -80px;
     z-index: 5; }
+  #egypt #glyphSVG {
+    margin-bottom: -500px; }
   #egypt * .glyph-items {
     fill: #dd851d;
     -webkit-animation-name: glow;
     -moz-animation-name: glow;
     animation-name: glow;
-    -webkit-animation-duration: 2s;
-    -moz-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 4s;
+    -moz-animation-duration: 4s;
+    animation-duration: 4s;
     -webkit-animation-direction: alternate;
     -moz-animation-direction: alternate;
     animation-direction: alternate;
@@ -84,18 +85,50 @@ section {
   from {
     fill: #dd851d; }
   to {
-    fill: #e79d46; } }
+    fill: #e8a24f; } }
 @-moz-keyframes glow {
   from {
     fill: #dd851d; }
   to {
-    fill: #e79d46; } }
+    fill: #e8a24f; } }
 @keyframes glow {
   from {
     fill: #dd851d; }
   to {
-    fill: #e79d46; } }
-  #egypt #glyphSVG {
-    margin-bottom: -400px; }
+    fill: #e8a24f; } }
+#moses {
+  padding: 0;
+  background-image: url("../img/bg/dawnBack.png"), -webkit-linear-gradient(#112525 0, #1a3636 100%);
+  background-image: url("../img/bg/dawnBack.png"), linear-gradient(to   , #1a3636 100%); }
+  #moses * #mosesMoses {
+    margin-bottom: -100px;
+    margin-left: -100px;
+    width: 100%;
+    max-width: 1000px; }
+
+#today {
+  background-color: #dd4e1d;
+  padding: 100px 0; }
+
+#newscaster * #newscastMan {
+  margin-top: 400px;
+  margin-bottom: -80px;
+  z-index: 5; }
+
+#ceos {
+  background-color: #112525; }
+  #ceos * .row {
+    margin-bottom: -200px; }
+  #ceos * .ceos {
+    width: 100%;
+    margin-bottom: -80px; }
+  #ceos * .logos {
+    width: 100%;
+    max-width: 80px;
+    opacity: 0.5; }
+
+#you {
+  background-image: url("../img/bg/o3Back.jpg");
+  background-image: url("../img/bg/o3Back.jpg"); }
 
 /*# sourceMappingURL=style.css.map */

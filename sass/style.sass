@@ -2,15 +2,23 @@
 @import "bourbon/bourbon"
 
 
-//	### SASS Variables ### 
-
 // Global
+body
+	@include background-image(linear-gradient(#000010 0, #000010 50%, #000010  100%))
+
+h1,h2,h3
+	color: white
+	line-height: 1.45
+	text-shadow: 0px 0px 20px #000
+	@include margin (10vh null null null)
 // Fonts 
-// Colors
+// Color Variables
 $blue-base: #438c8c 
 $yellow-base: #dd851d
+$orange-base: #dd4e1d
 // Sizes 
 
+//z-index zones
 .zone1
 	position: relative
 	z-index: 1
@@ -24,38 +32,15 @@ $yellow-base: #dd851d
 	position: relative
 	z-index: 4
 
-
-body
-	@include background-image(linear-gradient(#000010 0, #000010 50%, #000010  100%))
-
-
-h1,h2,h3
-	color: white
-	line-height: 1.45
-	text-shadow: 0px 0px 20px #000
-	@include margin (10vh null null null)
-.container
-	// height: 1vh
-
-
 .disappear
 	opacity: 0 
-.copy
-	// background-color: rgba(0, 0, 0, 0.8)
 
-.intro-wrapper
-	top: 0	
 section
-	&:nth-of-type(even)
-		background-color: #ccc
-	&:nth-of-type(odd)
-		background-color: #222
 	background-size: 100%
 	@include padding (20px)
 	min-height: 100vh
 	background-size: cover
 	background-position: bottom
-
 
 #intro
 	@include background-image(url("../img/back.png"))
@@ -63,9 +48,15 @@ section
 	background-repeat: no-repeat
 
 #dawn
+	@include padding(0px)
 	@include background-image(url("../img/bg/dawnBack.png"), linear-gradient( darken($blue-base, 30%) 0, darken($blue-base, 25%) 100%))		
 	* #dawn-campfire
 		max-width: 400px
+		@include margin (null null -200px null)
+		@extend .zone4
+	#dawn-ground
+		width: 100%		
+		@include margin (-100px null null null )
 
 #tribes
 	background-color: darken($blue-base, 30%)
@@ -75,14 +66,15 @@ section
 #egypt
 	background-color: darken($blue-base, 80%)
 	* #pharoah
-		@include margin (300px null null null)
+		@include margin (400px null -80px null)
 		z-index: 5
-
+	#glyphSVG
+		@include margin (null null -500px null)	
 	* .glyph-items
 		@extend .zone1
 		fill: #dd851d
 		@include animation-name(glow)
-		@include animation-duration(2s)
+		@include animation-duration(4s)
 		@include animation-direction(alternate)
 		@include animation-timing-function(ease)
 		@include animation-iteration-count(infinite)
@@ -90,20 +82,37 @@ section
 			from 
 				fill: $yellow-base
 			to 
-				fill: lighten($yellow-base, 10%)
-	#glyphSVG
-		@include margin (null null -400px null)
-
-
-
-
-
-
-		 		
+				fill: lighten($yellow-base, 12%)
+	 		
 #moses
+	@include padding(0px)
+	@include background-image(url("../img/bg/dawnBack.png"), linear-gradient( darken($blue-base, 30%) 0, darken($blue-base, 25%) 100%))	
+
+	* #mosesMoses
+		@include margin (null null -100px -100px)
+		width: 100%
+		max-width: 1000px
 #today
+	background-color: $orange-base
+	@include padding (100px 0px)
 #newscaster
+	* #newscastMan
+		@include margin (400px null -80px null)
+		z-index: 5
 #ceos
+	background-color: darken($blue-base, 30%)
+	* .row
+		@include margin (null null -200px null)	
+	* .ceos 
+		width: 100% 
+		@include margin (null null -80px null)
+	* .logos
+		width: 100%
+		max-width: 80px
+		opacity: .5
 #you
+	@include background-image(url("../img/bg/o3Back.jpg")) 
+
+
 #end
 #cta 

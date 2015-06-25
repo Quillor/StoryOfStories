@@ -48,6 +48,7 @@
             <img id="dawn-campfire" alt="campfire" src="img/dawn-campfire.png" class="center-block disappear fade-in-fire">
           </div>
         </div>
+        <img id="dawn-ground" alt="camp ground" src="img/dawn-ground.png" class="center-block ">
     </section>
 
     <section id="tribes" class="container-fluid">
@@ -73,7 +74,7 @@
     <section id="egypt" class="container-fluid">
         <div class="content">
           <div class="container">
-            <h2 class="text-center">In stories of old</h2>
+            <h2 class="text-center">In the days of old</h2>
             <h3 class="text-center">those with the most power, controlled the stories of society.</h3>
             
             <!-- SVG Graphic  -->
@@ -406,10 +407,17 @@
         <div class="content">
           <div class="container">
             <h2 class="text-center">It was the storytellers</h2>
-            <h3 class="text-center">who dared to stand up against these forces and create a story of their own</h3>        
-            <img id="moses" src="img/moses-moses.png" alt="Moses leading the people" class="pull-left">
+            <h3 class="text-center">who dared to stand up against these forces and forge a narrative of their own</h3> 
+            <div class="row">
+              <div class="col-md-8">
+                <img id="mosesMoses" src="img/moses-moses.png" alt="Moses leading the people" class="pull-left disappear fade-in-moses">
+              </div>
+              <div class="col-md-4"></div>
+            </div>       
           </div>
-        </div>      
+        </div> 
+        <img id="moses-ground" alt="Egypt" src="img/moses-egypt-ground.png" class="center-block">
+
     </section>
     <section id="today" class="container-fluid">
         <div class="content">
@@ -421,26 +429,29 @@
     <section id="newscaster" class="container-fluid">
         <div class="content">
           <div class="container">
-            <h2 class="text-center">Still today,</h2>
-            <h3 class="text-center">those with the most power,control the stories of society.</h3>        
-            <img id="quill" src="img/object.png" class="center-block">
+            <h2 class="text-center">In the modern world,</h2>
+            <h3 class="text-center">those with the most power, control the stories of society.</h3>        
+            <img id="newscastMan" src="img/newscaster-newscaster.png" class="pull-right disappear zone4 fade-in-newscaster">          
           </div>
         </div>      
     </section>
     <section id="ceos" class="container-fluid">
         <div class="content">
           <div class="container">
-            <h2 class="text-center">But Each generation of new storytellers</h2>
+            <h2 class="text-center">But each generation of new storytellers</h2>
             <h3 class="text-center">creates new tribes &amp; brands</h3>        
             <div class="row">
                <div class="col-xs-4">
-                  <img id="quill" src="img/object.png" class="center-block">
+                  <img src="img/logo-virgin.png" alt="Virgin Logo" class="logos center-block">
+                  <img src="img/ceos-richard-branson.png" class="center-block ceos">
                </div>
                <div class="col-xs-4">
-                  <img id="quill" src="img/object.png" class="center-block">
+                  <img src="img/logo-tesla.png" alt="Tesla Logo" class="logos center-block">
+                  <img src="img/ceos-elon-musk.png" class="center-block ceos">
                </div>
                <div class="col-xs-4">
-                  <img id="quill" src="img/object.png" class="center-block">
+                  <img src="img/logo-apple.png" alt="Apple Logo" class="logos center-block">
+                  <img src="img/ceos-steve-jobs.png" class="center-block ceos">
                </div>                            
             </div>
           </div>
@@ -449,18 +460,18 @@
     <section id="you" class="container-fluid">
         <div class="content">
           <div class="container">
-            <h2 class="text-center">Are you the next storyteller?</h2>
-            <h3 class="text-center">Let's change the digial landscape </h3>        
-            <img id="quill" src="img/object.png" class="center-block">
+            <h2 class="text-center">Is O3 the next great storyteller?</h2>
+            <h3 class="text-center">The world is waiting for the next great story. Let's work tell great stories together.</h3>        
+            <img id="o3" alt="O3 Logo" src="img/logo-o3.png" class="center-block">
           </div>
         </div>      
     </section> 
     <section id="end" class="container-fluid">
         <div class="content">
           <div class="container">
-            <h2 class="text-center">What’s your story?</h2>
+            <h2 class="text-center">So why me?</h2>
             <h3 class="text-center">Let’s work together to craft your client narratives. </h3>        
-            <img id="quill" src="img/object.png" class="center-block">
+            <img id="tim" src="img/tim-rosenberg.png" class="center-block">
           </div>
         </div>      
     </section> 
@@ -469,7 +480,7 @@
           <div class="container">
             <h2 class="text-center">Let's tell great stories together</h2>
             <h3 class="text-center">Want me on your team?</h3>        
-            <img id="quill" src="img/object.png" class="center-block">
+            <a href="mailto:tim@quillor.com" class="btn-primary text-center center-block">Let's take the next steps forward</a>
           </div>
         </div>      
     </section>       
@@ -525,15 +536,28 @@
       controller.addTween('.fade-in-tribes3', tweenFadeTribes3, 400); 
 
       //Egypt 
-      var tweenFadeEgypt = TweenMax.to( $('.fade-in-egypt'), .5, {css:{
+      var tweenFadeEgypt = TweenMax.to( $('.fade-in-egypt'), .3, {css:{
           opacity: 1,
-          marginTop: 0,
-          marginBottom: -50,
+          marginTop: 30,
+          marginBottom: -40,
         }});
       controller.addTween('.fade-in-egypt', tweenFadeEgypt, 0); 
 
- 
 
+      //Moses 
+      var tweenFadeMoses = TweenMax.to( $('.fade-in-moses'), .5, {css:{
+          opacity: 1,
+          marginLeft: 30,
+        }});
+      controller.addTween('.fade-in-moses', tweenFadeMoses, 0);  
+
+      //Newscaster 
+      var tweenFadeNewscaster = TweenMax.to( $('.fade-in-newscaster'), .3, {css:{
+          opacity: 1,
+          marginTop: 30,
+          marginBottom: -40,
+        }});
+      controller.addTween('.fade-in-newscaster', tweenFadeNewscaster, 0); 
 
 
 
