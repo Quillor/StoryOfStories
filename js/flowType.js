@@ -56,9 +56,9 @@ console.log("flowtype.js is installed");
 
       $('h1').flowtype({
          minimum   : 100,
-         maximum   : 1200,
-         minFont   : 35,
-         maxFont   : 70,
+         maximum   : 1400,
+         minFont   : 40,
+         maxFont   : 100,
          fontRatio : 8
       });
 
@@ -69,7 +69,7 @@ console.log("flowtype.js is installed");
          maximum   : 700,
          minFont   : 30,
          maxFont   : 50,
-         fontRatio : 4
+         fontRatio : 8
       });
 
 
@@ -78,7 +78,7 @@ console.log("flowtype.js is installed");
          maximum   : 400,
          minFont   : 20,
          maxFont   : 30,
-         fontRatio : 4
+         fontRatio : 8
       });
 
 

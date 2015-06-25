@@ -2,11 +2,27 @@ body {
   background-image: -webkit-linear-gradient(#000010 0, #000010 50%, #000010 100%);
   background-image: linear-gradient(to   , #000010 50%, #000010 100%); }
 
+@font-face {
+  font-family: "DiavloBlack";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/diavloBlack.eot?#iefix") format("embedded-opentype"), url("fonts/diavloBlack.woff2") format("woff2"), url("fonts/diavloBlack.woff") format("woff"), url("fonts/diavloBlack.ttf") format("truetype"), url("fonts/diavloBlack.svg#DiavloBlack") format("svg"); }
+@font-face {
+  font-family: "DiavloLight";
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/diavloLight.eot?#iefix") format("embedded-opentype"), url("fonts/diavloLight.woff2") format("woff2"), url("fonts/diavloLight.woff") format("woff"), url("fonts/diavloLight.ttf") format("truetype"), url("fonts/diavloLight.svg#DiavloLight") format("svg"); }
 h1, h2, h3 {
   color: white;
   line-height: 1.45;
   text-shadow: 0px 0px 20px #000;
   margin-top: 10vh; }
+
+h1, h2 {
+  font-family: "DiavloBlack", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+h3 {
+  font-family: "DiavloLight", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
 .zone1, #egypt * .glyph-items {
   position: relative;
@@ -30,7 +46,6 @@ h1, h2, h3 {
 section {
   background-size: 100%;
   padding: 20px;
-  min-height: 100vh;
   background-size: cover;
   background-position: bottom; }
 
@@ -39,6 +54,7 @@ section {
   background-image: url("../img/bg/introBack.png");
   background-color: #438c8c;
   background-size: 100%;
+  height: 100vh;
   background-repeat: no-repeat; }
   #intro * #quill {
     width: 100%;
@@ -49,11 +65,10 @@ section {
   background-image: url("../img/bg/dawnBack.png"), -webkit-linear-gradient(#112525 0, #1a3636 100%);
   background-image: url("../img/bg/dawnBack.png"), linear-gradient(to   , #1a3636 100%); }
   #dawn * #dawn-campfire {
-    max-width: 400px;
-    margin-bottom: -200px; }
+    max-width: 400px; }
   #dawn #dawn-ground {
     width: 100%;
-    margin-top: -100px; }
+    margin-top: -23%; }
 
 #tribes {
   background-color: #112525; }
@@ -105,19 +120,18 @@ section {
   background-image: url("../img/bg/dawnBack.png"), -webkit-linear-gradient(#112525 0, #1a3636 100%);
   background-image: url("../img/bg/dawnBack.png"), linear-gradient(to   , #1a3636 100%); }
   #moses * #mosesMoses {
-    margin-bottom: -200px;
     margin-left: -100px;
     width: 100%;
     max-width: 1000px; }
   #moses #moses-ground {
     width: 100%;
-    margin-top: -100px; }
+    margin-top: -23%; }
 
 #today {
   background-image: url("../img/bg/todayBack.png");
   background-image: url("../img/bg/todayBack.png");
   background-color: #dd4e1d;
-  padding: 100px 0; }
+  padding: 40vh 0; }
 
 #newscaster * #newscastMan {
   margin-top: 10px;
@@ -128,6 +142,10 @@ section {
   background-color: #112525; }
   #ceos * .row {
     margin-bottom: 0; }
+    #ceos * .row .col-xs-4 {
+      width: 51%;
+      padding: 0px;
+      margin: 0% 10%; }
   #ceos * .ceos {
     width: 100%;
     margin-bottom: -20px; }
@@ -141,9 +159,8 @@ section {
   background-image: url("../img/bg/o3Back.jpg"); }
 
 #end {
-  background-image: url("../img/bg/woodBack.jpg");
-  background-image: url("../img/bg/woodBack.jpg");
+  background-color: #112525;
   background-repeat: repeat;
-  background-size: 600px; }
+  background-size: 400px; }
 
 /*# sourceMappingURL=style.css.map */
