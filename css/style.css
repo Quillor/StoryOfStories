@@ -78,11 +78,9 @@ section {
 #egypt {
   background-color: black; }
   #egypt * #pharoah {
-    margin-top: 400px;
+    margin-top: 0;
     margin-bottom: -80px;
     z-index: 5; }
-  #egypt #glyphSVG {
-    margin-bottom: -500px; }
   #egypt * .glyph-items {
     fill: #dd851d;
     -webkit-animation-name: glow;
