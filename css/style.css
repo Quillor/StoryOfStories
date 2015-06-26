@@ -191,4 +191,8 @@ section {
   background-image: url("../img/bg/todayBack.png");
   background-color: #438c8c; }
 
+@media (max-width: 767px) {
+  .btn {
+    font-size: 15px; } }
+
 /*# sourceMappingURL=style.css.map */
