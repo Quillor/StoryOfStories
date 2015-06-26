@@ -80,7 +80,7 @@
         <div class="content">
           <div class="container">
             <h2 class="text-center">In ancient times,</h2>
-            <h3 class="text-center">those with the most power, controlled the stories of society.</h3>
+            <h3 class="text-center">those with the most power controlled the stories of society.</h3>
             
             <!-- SVG Graphic  -->
           <svg version="1.1" id="glyphSVG" class="zone1"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -435,7 +435,7 @@
         <div class="content">
           <div class="container">
             <h2 class="text-center">In the modern world,</h2>
-            <h3 class="text-center">those with the most power, control the stories of society.</h3>        
+            <h3 class="text-center">those with the most power, control the stories of society.</h3> <img id="newscastTV" src="img/newscaster-tv.png" class="center-block">         
             <img id="newscastMan" src="img/newscaster-newscaster.png" class="pull-right disappear zone4 fade-in-newscaster">          
           </div>
         </div>      
@@ -443,18 +443,18 @@
     <section id="ceos" class="container-fluid">
         <div class="content">
           <div class="container">
-            <h2 class="text-center">But each generation of new storytellers</h2>
-            <h3 class="text-center">creates new tribes &amp; brands</h3>        
+            <h2 class="text-center">But new storytellers rise to the challenge </h2>
+            <h3 class="text-center">of crafting brands that question the status quo. </h3>        
             <div class="row">
-               <div class="col-xs-4">
+               <div class="col-xs-4 disappear fade-in-Ceo1">
                   <img src="img/logo-virgin.png" alt="Virgin Logo" class="logos center-block">
                   <img src="img/ceos-richard-branson.png" class="center-block ceos">
                </div>
-               <div class="col-xs-4">
+               <div class="col-xs-4 disappear fade-in-Ceo2">
                   <img src="img/logo-tesla.png" alt="Tesla Logo" class="logos center-block">
                   <img src="img/ceos-elon-musk.png" class="center-block ceos">
                </div>
-               <div class="col-xs-4">
+               <div class="col-xs-4 disappear fade-in-Ceo3">
                   <img src="img/logo-apple.png" alt="Apple Logo" class="logos center-block">
                   <img src="img/ceos-steve-jobs.png" class="center-block ceos">
                </div>                            
@@ -465,27 +465,27 @@
     <section id="you" class="container-fluid">
         <div class="content">
           <div class="container">
-            <h2 class="text-center">Is O3 the next great storyteller?</h2>
-            <h3 class="text-center">The world is waiting for the next great story. Let's work tell great stories together.</h3>        
             <img id="o3" alt="O3 Logo" src="img/logo-o3.png" class="center-block">
+            <h2 class="text-center">Is O3 the next great storyteller?</h2>
+            <h3 class="text-center">The world is waiting for a compelling story. Let me join your team and we’ll tell great stories together.</h3>        
           </div>
         </div>      
     </section> 
     <section id="end" class="container-fluid">
         <div class="content">
           <div class="container">
+             <img id="tim" src="img/tim-rosenberg.png" class="center-block">          
             <h2 class="text-center">So why me?</h2>
-            <h3 class="text-center">Let’s work together to craft your client narratives. </h3>        
-            <img id="tim" src="img/tim-rosenberg.png" class="center-block">
+            <h3 class="text-center">Because I use strategy to solve problems and tell engaging stories. I seek to understand your client's narrative and design an authentic message.  </h3>        
           </div>
         </div>      
     </section> 
     <section id="cta" class="container-fluid">
         <div class="content">
           <div class="container">
-            <h2 class="text-center">Let's tell great stories together</h2>
-            <h3 class="text-center">Want me on your team?</h3>        
-            <a href="mailto:tim@quillor.com" class="button text-center center-block">Let's take the next steps forward</a>
+            <h2 class="text-center">Want me on your team?</h2>
+            <h3 class="text-center"></h3>        
+            <a href="mailto:tim@quillor.com" class="btn btn-default btn-lg text-center center-block">Let's make it happen.</a>
           </div>
         </div>      
     </section>       
@@ -541,7 +541,7 @@
       controller.addTween('.fade-in-tribes3', tweenFadeTribes3, 400); 
 
       //Egypt 
-      var tweenFadeEgypt = TweenMax.to( $('.fade-in-egypt'), .3, {css:{
+      var tweenFadeEgypt = TweenMax.to( $('.fade-in-egypt'), .4, {css:{
           opacity: 1,
           marginTop: -200,
           marginBottom: -40,
@@ -559,11 +559,26 @@
       //Newscaster 
       var tweenFadeNewscaster = TweenMax.to( $('.fade-in-newscaster'), .3, {css:{
           opacity: 1,
-          marginTop: 30,
+          marginTop: -100,
           marginBottom: -40,
         }});
       controller.addTween('.fade-in-newscaster', tweenFadeNewscaster, 0); 
 
+    // #### CEOs
+      var tweenFadeCeo1 = TweenMax.to( $('.fade-in-Ceo1'), .1, {css:{
+          opacity: 1,
+          marginTop: 0}});
+      controller.addTween('.fade-in-Ceo1', tweenFadeCeo1, 0);
+
+      var tweenFadeCeo2 = TweenMax.to( $('.fade-in-Ceo2'), .1, {css:{
+          opacity: 1,
+          marginTop: 0}});
+      controller.addTween('.fade-in-Ceo2', tweenFadeCeo2, 200);
+
+      var tweenFadeCeo3 = TweenMax.to( $('.fade-in-Ceo3'), .1, {css:{
+          opacity: 1,
+          marginTop: 0}});
+      controller.addTween('.fade-in-Ceo3', tweenFadeCeo3, 400); 
 
 
 

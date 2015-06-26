@@ -1,18 +1,15 @@
 //Import Bourbon
 @import "bourbon/bourbon"
 
-
-
-// Global
-body
-	@include background-image(linear-gradient(#000010 0, #000010 50%, #000010  100%))
-
-
+// fonts
 @include font-face("DiavloBlack", "fonts/diavloBlack")
 @include font-face("DiavloLight", "fonts/diavloLight")
 $diavloBlack: "DiavloBlack", $helvetica 
 $diavloLight: "DiavloLight", $helvetica 
 
+// Global
+body
+	@include background-image(linear-gradient(#000010 0, #000010 50%, #000010  100%))
 h1,h2,h3
 	color: white
 	line-height: 1.45
@@ -22,13 +19,22 @@ h1,h2
 	font-family: $diavloBlack
 h3
 	font-family: $diavloLight		
-// Fonts 
+
 // Color Variables
 $blue-base: #438c8c 
 $yellow-base: #dd851d
 $orange-base: #dd4e1d
 
-// Sizes 
+//Buttons 
+.btn
+	font-family: $diavloBlack
+	color: $blue-base
+	width: 100%
+	padding: 20px 40px
+	max-width: 500px
+	font-size: 30px
+	margin-top: 100px
+	margin-bottom: 50px
 
 //z-index zones
 .zone1
@@ -81,7 +87,7 @@ section
 	* .row
 		@include margin (null null 0px null)	
 		.col-xs-4
-			width: 51%
+			width: 50%
 			padding: 0px 
 			margin: 0% -10%
 	* .tribesPeople 
@@ -129,6 +135,9 @@ section
 	* #newscastMan
 		@include margin (10px null -180px null)
 		z-index: 5
+	* #newscastTV
+		width: 100% 
+		max-width: 1200px	
 #ceos
 	background-color: darken($blue-base, 30%)
 	* .row
@@ -147,9 +156,9 @@ section
 #you
 	@include background-image(url("../img/bg/o3Back.jpg")) 
 #end
-	// @include background-image(url("../img/bg/woodBack.jpg")) 
-	background-color: darken($blue-base, 30%)
-	background-repeat: repeat
-	background-size: 400px
-
+	@include background-image(url("../img/bg/dawnBack.png"), linear-gradient( darken($blue-base, 30%) 0, darken($blue-base, 25%) 100%))	
+	background-repeat: no-repeat
+	background-size: 100%
 #cta 
+	@include background-image(url("../img/bg/todayBack.png"))	
+	background-color: darken($blue-base, 0%)
