@@ -1,24 +1,15 @@
 //Import Bourbon
-@import "bourbon/bourbon"
+@import "bourbon/bourbon.scss"
+@import "_global.sass"
+@import "_typography.sass"
 
-// fonts
-@include font-face("DiavloBlack", "fonts/diavloBlack")
-@include font-face("DiavloLight", "fonts/diavloLight")
-$diavloBlack: "DiavloBlack", $helvetica 
-$diavloLight: "DiavloLight", $helvetica 
 
-// Global
-body
-	@include background-image(linear-gradient(#000010 0, #000010 50%, #000010  100%))
-h1,h2,h3
-	color: white
-	line-height: 1.45
-	text-shadow: 0px 0px 20px #000
-	@include margin (null null null null)
-h1,h2
-	font-family: $diavloBlack
-h3
-	font-family: $diavloLight		
+
+
+
+
+
+
 
 // Color Variables
 $blue-base: #438c8c 
@@ -163,28 +154,45 @@ section
 	@include background-image(url("../img/bg/todayBack.png"))	
 	background-color: darken($blue-base, 0%)
 
+.social-icons
+	@include margin (null 10px null 10px)
+	color: lighten($blue-base, 30%)
+	
+	&:hover, &:active, &:focus
+		color: white;
+		text-decoration: none
+	&:visited,	
+		color: lighten($blue-base, 30%)
+		
+
+
+
 
 //Responsive 
 
-// Responsive Variables
-$screen-xs-min: 0px
-$screen-sm-min: 768px
-$screen-xs-max: ($screen-sm-min - 1)
-$screen-md-min: 992px
-$screen-sm-max: ($screen-md-min - 1)
-$screen-lg-min: 1200px
-$screen-md-max: ($screen-lg-min - 1)
-$screen-xlg-min: 2000px
+// // Responsive Variables
+// $screen-xs-min: 0px
+// $screen-sm-min: 768px
+// $screen-xs-max: ($screen-sm-min - 1)
+// $screen-md-min: 992px
+// $screen-sm-max: ($screen-md-min - 1)
+// $screen-lg-min: 1200px
+// $screen-md-max: ($screen-lg-min - 1)
+// $screen-xlg-min: 2000px
  
-// Media Queries
-@media (min-width: $screen-xs-min)
-@media (max-width: $screen-xs-max)
-	.btn
-		font-size: 15px
-@media (max-width: $screen-xs-max)
-@media (min-width: $screen-sm-min) 	
-@media (max-width: $screen-sm-max)
-@media (min-width: $screen-md-min)
-@media (max-width: $screen-md-max) 
-@media (min-width: $screen-lg-min)
-@media (min-width: $screen-xlg-min)
+
+// @media (min-width: $screen-xs-min)
+
+
+// @media (max-width: $screen-xs-max)
+// 	.btn
+// 		font-size: 15px
+
+
+// @media (max-width: $screen-xs-max)
+// @media (min-width: $screen-sm-min) 	
+// @media (max-width: $screen-sm-max)
+// @media (min-width: $screen-md-min)
+// @media (max-width: $screen-md-max) 
+// @media (min-width: $screen-lg-min)
+// @media (min-width: $screen-xlg-min)

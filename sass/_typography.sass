@@ -1,0 +1,26 @@
+// Typography
+
+// Fonts
+@include font-face("DiavloBlack", "fonts/diavloBlack")
+@include font-face("DiavloLight", "fonts/diavloLight")
+$diavloBlack: "DiavloBlack", $helvetica 
+$diavloLight: "DiavloLight", $helvetica 
+
+
+// Global
+body
+	@include background-image(linear-gradient(#000010 0, #000010 50%, #000010  100%))
+h1,h2,h3,h4,h5
+	color: white
+	line-height: 1.45
+	text-shadow: 0px 0px 20px #000
+	@include margin (null null null null)
+h1,h2,h3,h4,h5, .h1,.h2,.h3,.h4,.h5
+	font-family: $diavloBlack
+h3
+	font-family: $diavloLight	
+
+
+
+.text-reverse
+	color: white
